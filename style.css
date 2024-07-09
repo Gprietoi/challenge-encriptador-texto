@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario:#F3F5FC;
+    --color-secundario:#0A3871;
+
+    --fuente-montserrat:"Montserrat", sans-serif;
+    --fuente-krona:"Krona One", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primario);
+    color: var(--color-secundario) ;
+}
+
+header {
+    padding: 5px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 5px; /* Añade espacio para el footer */
+}
+
+.left-panel{
+    flex: 2;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+} 
+
+.right-panel {
+    flex: 1;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 32px;
+    justify-content: center;
+    align-items: flex-start; /* Cambia a flex-start */
+    height: 99vh;
+}
+
+.Titulo__encriptador{
+    font-size: 32px;
+    font-family: var(--fuente-krona);
+    margin-bottom: 40px;
+}
+
+.result-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    height: 570px;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    font-size: 19px;
+    color: var(--color-secundario);
+    margin-bottom: 20px;
+}
+
+textarea::placeholder {
+    color: var(--color-secundario);
+}
+
+.info {
+    font-size: 12px;
+    color: #495057;
+    margin-bottom: 16px;
+}
+
+.info::before {
+    content: "ⓘ";
+    margin-right: 8px;
+}
+
+
+.botones {
+    display: flex;
+    gap: 24px;
+}
+
+button {
+    flex: 1;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.encrypt {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+.encrypt:hover {
+    background-color: #072B61;
+}
+
+.decrypt {
+    background-color: #D8DFE8;
+    color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+}
+
+.decrypt:hover {
+    background-color: #CED4DA;
+}
+
+.decrypt:hover {
+    background-color: #CED4DA;
+}
+
+.result-box {
+    background-color: white;
+    padding: 32px;
+    border-radius: 32px;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#initial-message img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 32px;
+}
+
+#initial-message h2 {
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+#initial-message p {
+    font-size: 16px;
+    color: #495057;
+}
+
+#result-message {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#encrypted-text {
+    flex-grow: 1;
+    background-color: white;
+    border: none;
+    resize: none;
+    padding: 20px;
+    font-size: 16px;
+    color: #495057;
+    margin-bottom: 32px;
+}
+
+#copy-button {
+    padding: 24px;
+    background-color: #ffffff;
+    color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#copy-button:hover {
+    background-color: #EFF1FA;
+}
+
+.footer{
+    background-color: var(--color-secundario);
+    padding: 5px;
+    color:var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 40px;
+        
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        padding: 0;
+    }
+
+    textarea {
+        height: 200px; /* Reducir la altura para móviles */
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    button {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .result-box {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px; /* Reducir tamaño del título */
+        margin-bottom: 20px;
+    }
+
+    .info {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
